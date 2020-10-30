@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.css';
 import MessageComponent from './MessageComponent'
+import {MessageType} from '../interface/MessageType';
 
 function ChatBox(props: any) {
 
@@ -8,7 +9,7 @@ function ChatBox(props: any) {
     <div className="ChatBox">
       {
           props.messages !== undefined &&
-          props.messages.map((message:any, index:Number) => {
+          props.messages.map((message:MessageType, index:number) => {
               return <MessageComponent message={message} key={index}>
               </MessageComponent>
           })
